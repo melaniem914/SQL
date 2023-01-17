@@ -1,0 +1,26 @@
+--Create a grocery store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, cost INTEGER, sale_price INTEGER, profit INTEGER);
+
+INSERT INTO store VALUES
+(1, "V-neck shirt", 3, 5, 2),
+(2, "Crew neck shirt", 3, 6, 3),
+(3, "Blue jeans", 5, 15, 10),
+(4, "Button down shirt", 4, 12, 8),
+(5, "Hoodie", 8, 20, 12),
+(6, "Sweatshirt", 4, 7, 3),
+(7, "Bra", 6, 12, 6),
+(8, "Boxers", 2, 5, 3),
+(9, "Winter coat", 10, 20, 10),
+(10, "Scarf", 2, 5, 3),
+(11, "Long sleeve t-shirt", 7, 10, 3),
+(12, "Leggings", 1, 5, 4),
+(13, "Slippers", 5, 8, 3),
+(14, "Calf boots", 10, 20, 10),
+(15, "Platform shoes", 12, 22, 10)
+;
+
+--display the database ordered by price; what is the max profit on any one item in the store?
+
+SELECT * FROM store ORDER BY sale_price;
+SELECT MAX(profit) FROM store;
